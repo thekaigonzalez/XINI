@@ -1,0 +1,25 @@
+{
+    "name": "xini",
+    "displayName": "xini",
+    "description": "XINI Language Support",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.66.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "xini",
+            "aliases": ["XINI", "xini"],
+            "extensions": [".xini"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "xini",
+            "scopeName": "source.xini",
+            "path": "./syntaxes/xini.tmLanguage.json"
+        }]
+    }
+}

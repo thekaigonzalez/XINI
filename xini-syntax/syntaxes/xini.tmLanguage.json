@@ -1,0 +1,107 @@
+{
+	"name": "Xini",
+	"scopeName": "source.xini",
+	"patterns": [
+		{
+			"begin": "(^[ \\t]+)?(?=\\-)",
+			"beginCaptures": {
+				"1": {
+					"name": "punctuation.whitespace.comment.leading.xini"
+				}
+			},
+			"end": "(?!\\G)",
+			"patterns": [
+				{
+					"begin": "-",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.defxinition.comment.xini"
+						}
+					},
+					"end": "\\n",
+					"name": "comment.line.number-sign.xini"
+				}
+			]
+		},
+		{
+			"begin": "(^[ \\t]+)?(?=;)",
+			"beginCaptures": {
+				"1": {
+					"name": "punctuation.whitespace.comment.leading.xini"
+				}
+			},
+			"end": "(?!\\G)",
+			"patterns": [
+				{
+					"begin": ";",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.defxinition.comment.xini"
+						}
+					},
+					"end": "\\n",
+					"name": "comment.line.semicolon.xini"
+				}
+			]
+		},
+		{
+			"captures": {
+				"1": {
+					"name": "keyword.other.defxinition.xini"
+				},
+				"2": {
+					"name": "punctuation.separator.key-value.xini"
+				}
+			},
+			"match": "\\b([a-zA-Z0-9_.-]+)\\b\\s*(=)"
+		},
+		{
+			"captures": {
+				"1": {
+					"name": "punctuation.defxinition.entity.xini"
+				},
+				"3": {
+					"name": "punctuation.defxinition.entity.xini"
+				}
+			},
+			"match": "^(\\[)(.*?)(\\])",
+			"name": "entity.name.section.group-title.xini"
+		},
+		{
+			"begin": "'",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.defxinition.string.begin.xini"
+				}
+			},
+			"end": "'",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.defxinition.string.end.xini"
+				}
+			},
+			"name": "string.quoted.single.xini",
+			"patterns": [
+				{
+					"match": "\\\\.",
+					"name": "constant.character.escape.xini"
+				}
+			]
+		},
+		{
+			"begin": "\"",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.defxinition.string.begin.xini"
+				}
+			},
+			"end": "\"",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.defxinition.string.end.xini"
+				}
+			},
+			"name": "string.quoted.double.xini"
+		}
+	]
+}
