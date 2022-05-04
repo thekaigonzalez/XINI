@@ -9,17 +9,33 @@
     "categories": [
         "Programming Languages"
     ],
+    "publisher": "KaiDGonzalez",
+    "repository": {
+        "url": "https://github.com/thekaigonzalez/XINI"
+    },
     "contributes": {
-        "languages": [{
-            "id": "xini",
-            "aliases": ["XINI", "xini"],
-            "extensions": [".xini"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "xini",
-            "scopeName": "source.xini",
-            "path": "./syntaxes/xini.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "xini",
+                "aliases": [
+                    "XINI",
+                    "xini"
+                ],
+                "extensions": [
+                    ".xini"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "xini",
+                "scopeName": "source.xini",
+                "path": "./syntaxes/xini.tmLanguage.json"
+            }
+        ]
+    },
+    "dependencies": {
+        "keytar": "^7.9.0"
     }
 }
