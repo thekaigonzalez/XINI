@@ -32,8 +32,13 @@ module.exports.parseXINI = (str) => {
             name = "";
             buffer = "";
             state = 0
+        } else if (str[i] == '\n' && state == 1200) {
+            state = 0;
+            buffer = ""
         } else if (str[i] == '\n' && state == 0) {
             continue;
+        } else if (str[i] == '-' && state == 0) {
+            state = 1200;
         } else {
             buffer += str[i]
         }
