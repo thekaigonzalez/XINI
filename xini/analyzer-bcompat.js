@@ -13,11 +13,11 @@ module.exports.parseXINI = function (str) {
 
     for (let i = 0; i < str.length; ++i) {
         if (str[i] == '.' && state == 0) {
-            if (current_pos[buffer] == null) current_pos[buffer] = {}
+            if (current_pos[buffer.trim()] == null) current_pos[buffer.trim()] = {}
 
 
-            if (current_pos[buffer] != null && typeof current_pos[buffer] == 'object') {
-                current_pos = current_pos[buffer]
+            if (current_pos[buffer.trim()] != null && typeof current_pos[buffer.trim()] == 'object') {
+                current_pos = current_pos[buffer.trim()]
             }
 
             buffer = "";
