@@ -37,6 +37,8 @@ module.exports.parseXINI = function (str) {
             buffer = ""
         } else if (str[i] == '\n' && state == 0) {
             continue;
+        } else if (str[i] == '\r') {
+            continue
         } else if (str[i] == '-' && state == 0) {
             state = 1200;
         } else {
