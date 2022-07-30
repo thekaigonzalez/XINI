@@ -1,6 +1,8 @@
-hello.one.teow = 1
-hello.world = 12
+hello.one = 1
+hello.world = Hello, world!
 
-- Other things
+- Another class...
 goodbye.two = 2
 goodbye.one = 1
+
+goodbye.world = &hello.world
